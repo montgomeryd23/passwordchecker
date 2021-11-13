@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<style media="screen">
+  body {
+  background-image: url("https://wallpapersmug.com/large/7facbb/bridge-fortnite.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+
+  #whitescreen {
+  position: absolute;
+  top: 200px;
+  left: 450px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  }
+  #img10 {
+  position: fixed;
+  top: 400px;
+  left: 690px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  }
+  #Code {
+  position: fixed;
+  top: 350px;
+  left: 485px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  }
+  #belowbutton {
+    position: fixed;
+    top: 300px;
+    left: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    }
+    #textduke {
+      position: fixed;
+      top: 250px;
+      left: 685px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      }
+      #muscles {
+        position: fixed;
+        top: 750px;
+        left: 785px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 5%;
+        }
+        #strongpassword {
+          position: fixed;
+          top: 500px;
+          left: 750px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 10%;
+          }
+          #weakpassword {
+            position: fixed;
+            top: 500px;
+            left: 750px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10%;
+            }
+            #mediumpassword {
+              position: fixed;
+              top: 500px;
+              left: 750px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 10%;
+              }
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function isPasswordLong (array){ // this function is used to test if the password has at least 8 characters and utilizes an if statement that checks the arrays length
+      if (array.length >= 8){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+    function doesPasswordHaveSC (array){ // this function is used to test if the password symbols which are important in developing a strong password
+      for (var i = 0; i < array.length; i++){
+if (array[i] == "$" || array[i] ==  "%" || array[i] ==  "*" || array[i] ==  "!" || array[i] ==  "#" || array[i] ==  "@" || array[i] ==  "&" || array[i] ==  "("){
+return true
+    }
+    if (array[i] == ")" || array[i] ==  "^"){
+      return true
+    }
+  }return false
+}
+  function doesPasswordHaveLetters (array){ // this function is used to test if the password has letters and checks for both upper case and lower case letters
+    for (var i = 0; i < array.length; i++)
+if (array[i] == "a" || array[i] ==  "b" || array[i] ==  "c"|| array[i] ==  "d" || array[i] ==  "e"|| array[i] ==  "f" || array[i] ==  "g"|| array[i] ==  "h" ){
+  return true
+}
+if(array[i] ==  "i"|| array[i] ==  "j" || array[i] ==  "k"|| array[i] ==  "l" || array[i] ==  "m"|| array[i] ==  "n" || array[i] ==  "o"|| array[i] ==  "p"){
+  return true
+}
+  if (array[i] ==  "q" || array[i] ==  "r" || array[i] ==  "s"|| array[i] ==  "t" || array[i] ==  "u"|| array[i] ==  "v" || array[i] ==  "w"|| array[i] ==  "x"){
+    return true
+  }
+    if (array[i] ==  "y"|| array[i] ==  "z"){
+  return true
+      }
+      if (array[i] == "A" || array[i] ==  "B" || array[i] ==  "C"|| array[i] ==  "D" || array[i] ==  "E"|| array[i] ==  "F" || array[i] ==  "G"|| array[i] ==  "H" ){
+        return true
+      }
+      if(array[i] ==  "I"|| array[i] ==  "J" || array[i] ==  "K"|| array[i] ==  "L" || array[i] ==  "M"|| array[i] ==  "N" || array[i] ==  "O"|| array[i] ==  "P"){
+        return true
+      }
+        if (array[i] ==  "Q" || array[i] ==  "R" || array[i] ==  "S"|| array[i] ==  "T" || array[i] ==  "U"|| array[i] ==  "V" || array[i] ==  "W"|| array[i] ==  "X"){
+          return true
+        }
+          if (array[i] ==  "Y"|| array[i] ==  "Z"){
+        return true
+            }
+      else {
+        return false
+      }
+    }
+
+    function doesPasswordHaveNumbers (array){ // this function is used to test if the password has numbers, and returns either true or false in order for the main function to work
+        for (var i = 0; i < array.length; i++){
+        if (array[i] ==  "0" || array[i] ==  "1" || array[i] ==  "2" || array[i] ==  "3" || array[i] ==  "4" || array[i] ==  "5" || array[i] ==  "6" || array[i] ==  "7" ){
+          return true
+        }
+        if(array[i] ==  "8" || array[i] ==  "9"){
+          return true
+        }
+
+
+        }
+        return false
+}
+
+
+    function mainFunction(){ // this function is used to combine the prior functions into one function that tells whether the password is strong or weak
+      var enterPassword = document.getElementById("Code").value
+      console.log(isPasswordLong(enterPassword));
+      console.log(doesPasswordHaveSC(enterPassword));
+      console.log(doesPasswordHaveLetters(enterPassword));
+      console.log(doesPasswordHaveNumbers(enterPassword));
+if (isPasswordLong(enterPassword) && doesPasswordHaveSC(enterPassword) && doesPasswordHaveLetters(enterPassword) && doesPasswordHaveNumbers(enterPassword)) {
+document.getElementById("strongpassword").src = "file:///Users/montgomerydube/Downloads/button_strong-password.png"
+document.getElementById("weakpassword").src = "" // this is blank in order to not display the wrong image, or to make the image disappear
+document.getElementById("mediumpassword").src = ""
+}
+else if (isPasswordLong(enterPassword) && doesPasswordHaveSC(enterPassword) || isPasswordLong(enterPassword) && doesPasswordHaveNumbers(enterPassword)){
+    document.getElementById("mediumpassword").src = "file:///Users/montgomerydube/Downloads/button_medium-password.png"
+    document.getElementById("weakpassword").src = ""
+    document.getElementById("strongpassword").src = ""
+}
+else
+{
+  document.getElementById("weakpassword").src = "file:///Users/montgomerydube/Downloads/button%20(14).png"
+  document.getElementById("strongpassword").src = ""
+  document.getElementById("mediumpassword").src = ""
+}
+}
+    </script>
+  </head>
+  <body>
+    <img  id ="whitescreen" src="https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg" >
+    <img  id ="muscles" src="" >
+
+    <img  id ="strongpassword" src="" >
+    <img  id ="weakpassword" src="" >
+    <img  id ="mediumpassword" src="" >
+
+    <h1 id = textduke >Type Password Here:<h1>
+  <input type="text" id="Code" name = "Code"><br><br>
+
+  <img id = "img10" onclick = "mainFunction()" width = "100px" src="https://www.confirm.com/wp-content/uploads/2020/09/logo.png">
+
+  <p id="key"></p>
+
+  </body>
+</html>
